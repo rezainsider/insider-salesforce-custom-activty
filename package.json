@@ -12,6 +12,7 @@
 		"jsforce": "^1.7.1",
 		"jsonwebtoken": "^7.4.0",
 		"xmlhttprequest": "1.x.x",
-		"jwt-simple": "^0.5.1"
+		"jwt-simple": "^0.5.1",
+		"hoek": ">=4.2.1"
 	}
 }
