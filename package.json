@@ -1,0 +1,17 @@
+{
+	"name": "InsiderBackend",
+	"version": "0.0.2",
+	"description": "Backend for the Salesforce Service Cloud custom split activity",
+	"main": "backend/server.js",
+	"scripts": {
+		"start": "node backend/server.js"
+	},
+	"dependencies": {
+		"body-parser": "^1.17.1",
+		"express": "^4.15.2",
+		"jsforce": "^1.7.1",
+		"jsonwebtoken": "^7.4.0",
+		"xmlhttprequest": "1.x.x",
+		"jwt-simple": "^0.5.1"
+	}
+}
