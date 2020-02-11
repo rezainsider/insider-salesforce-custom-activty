@@ -1,85 +1,37 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-  <title></title>
   <meta charset="utf-8" />
-  <meta http-equiv="x-ua-compatible" content="ie=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="css/styles.css">
-  <link rel="stylesheet" href="css/bootstrap.min.css" />
-  <script data-main="js/main.js" type="text/javascript" src="js/require.js"></script>
-  <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+  <title>Custom JB Oauth2 Activity</title>
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="js/require.js"></script>
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></s
+
+      < script >
+      $(function () {
+        window.location.href = $("#authLink").attr("href");
+      });
+  </script>
+  <!--bring in custom js dependency for Postmonger signaling-->
   <script type="text/javascript">
     (function () {
       var config = {
-        baseUrl: 'js'
+        baseUrl: ""
       };
-
-      var dependencies = [
-        'customActivity'
-      ];
-
+      var dependencies = ["customActivity"];
       require(config, dependencies);
     })();
   </script>
 </head>
 
 <body>
-  <div id="step1" class="well">
-    <form action="/person.php" method="post">
-      <div class="form-group form-heading">
-        <img src="logo.PNG" />
-        push activity
-      </div>
-      <div class="form-group">
-        <label for="apikey">API Key</label>
-        <input required="true" id="apikey" class="form-control" type="text" name="apikey"
-          placeholder="Enter the API key here">
-      </div>
-      <div class="form-group">
-        <label for="Title">Title</label>
-        <input id="titl" required="true" class="form-control" type="text" name="Title"
-          placeholder="Enter the title here">
-      </div>
-      <div class="form-group">
-        <label for="Message">Message</label>
-        <input required=true class="form-control" id="msg" type="text" name="Message"
-          placeholder="Enter your message here">
-      </div>
-
-      <div class="form-group">
-        <label for="image">Image URL</label>
-        <input id="imgurl" class="form-control" type="url" name="image" placeholder="Enter the image url here">
-      </div>
-      <div class="form-group">
-        <label for="email">Email Key</label>
-        <input id="eml" required="false" class="form-control" type="email" name="email"
-          placeholder="Enter the email here" />
-      </div>
-      <div class="form-group">
-        <label for="deeplink">Deep Link Key</label>
-        <input id="deep" required="false" class="form-control" type="text" name="deeplink"
-          placeholder="Enter the deep link here">
-      </div>
-      <div class="form-group">
-        <label for="deeplinkval">Deep Link Value</label>
-        <input id="deepval" required="false" class="form-control" type="text" name="deeplinkval"
-          placeholder="Enter the deep link here">
-      </div>
-      <div class="form-group">
-        <label for="channel">Channel ID</label>
-        <input id="channel" required="false" class="form-control" type="number" name="channel"
-          placeholder="Enter the channel id here" />
-      </div>
-      <div class="form-group">
-        <label for="campaign">Campaign</label>
-        <input id="camp" required="false" class="form-control" type="number" name="campaign"
-          placeholder="Enter the campaign id here">
-      </div>
-
-    </form>
-  </div>
-</body>
-
+  <div id="step1" class="step">
+  <a 
+  id="authLink" 
+  href="https://mcgrkf1grk-7hpymyq-llb56w1p8.auth.marketingcloudapis.com/v2/authorize?response_type=code&client_id=dr7748o4dw3ewwwltajq4mqi&redirect_uri=https://{endpointurl}/oauth/redirect "
+    ></a>
+   </div>
+  </body>
 </html>
