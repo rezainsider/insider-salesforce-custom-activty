@@ -26,7 +26,7 @@ app.get('/oauth/redirect', (req, res) => {
     axios({
 // make a POST request
         method: 'post', // and request token
-        url: `https://${tse}.auth-qa1.marketingcloudqaapis.com/v2/token`,
+        url: `https://mcgrkf1grk-7hpymyq-llb56w1p8.auth.marketingcloudapis.com/v2/token`,
         // Set the content type header, so that we get the response in JSON
         headers: {
             accept: 'application/json'
