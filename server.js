@@ -4,8 +4,8 @@ var path = require('path');
 var axios = require('axios');
 
 
-var clientID = process.env.CLIENT_ID;
-var clientSecret = process.env.CLIENT_SECRET;
+var clientID = 'qw1rb1etv9hvo1sycpz8ra35';
+var clientSecret = 'TR7GpfCQVwCLbg96dIPC0ErT';
 
 app.set('port', (process.env.PORT || 44807));
 app.use(express.static(__dirname + '/public'));
@@ -20,6 +20,8 @@ app.get('/oauth/redirect', (req, res) => {
     were sent to this route. We want the `code` param and the tenant specific endpoint (TSE) for the user */
     var requestToken = req.query.code;
     var tse = req.query.tssd;
+    console.log(requestToken);
+    console.log(tse);
     axios({
 // make a POST request
         method: 'post', // and request token
