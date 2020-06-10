@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Insider - Web Push Salesforce Activity</title>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+        crossorigin="anonymous">
+  <script data-main="js/main.js" type="text/javascript" src="public/js/require.js"></script>
+  <script type="text/javascript" src="public/js/jquery-3.3.1.min.js"></script>
+  <script type="text/javascript">
+      (function () {
+          var config = {
+              baseUrl: 'js'
+          };
+
+          var dependencies = [
+              'customActivity'
+          ];
+
+          require(config, dependencies);
+      })();
+  </script>
+</head>
+
+<body>
+<div id="step1" class="well">
+  <form action="" method="post">
+    <div class="form-group form-heading">
+      <img src="logo.png" />
+      push activity
+    </div>
+    <div class="form-group">
+      <label for="api_key">API Key</label>
+      <input type="text"  id="api_key" class="form-control" name="api_key" required="" placeholder="Enter The API Key Here">
+    </div>
+    <div class="form-group">
+      <label for="title">Title</label>
+      <input type="text"  id="title" class="form-control" name="title" required="" placeholder="Enter The Title Here">
+    </div>
+    <div class="form-group">
+      <label for="description">Description</label>
+      <input type="text" id="description" class="form-control" name="description" required="" placeholder="Enter Your Description Here">
+    </div>
+    <div class="form-group">
+      <label for="push_url">Push URL</label>
+      <input type="url" id="push_url" class="form-control"  name="push_url" required="" placeholder="Enter Your Push URL Here">
+    </div>
+    <div class="form-group">
+      <label for="image_url">Image URL</label>
+      <input type="url" id="image_url" class="form-control" name="image_url" required="" placeholder="Enter The Image URL Here">
+    </div>
+    <div class="form-group">
+      <label for="banner">Rich Image URL</label>
+      <input type="url" id="banner" class="form-control" name="banner" required="" placeholder="Enter The Rich Image URL Here">
+    </div>
+  </form>
+</div>
+</body>
+</html>
+
+<style>
+  body {
+    padding: 20px;
+    margin: 0;
+  }
+  #step1 {
+    display: block;
+  }
+  .form-heading{
+    background: #c8c8c8e3;
+    color: #666464;
+    font-size: 18px;
+    font-weight: 600;
+  }
+  label{
+    width: 40%;
+  }
+</style>
