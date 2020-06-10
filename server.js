@@ -46,7 +46,7 @@ app.get('/oauth/redirect', (req, res) => {
         axios({
 // make a sample GET request using the access token
             method: 'get', // and request user info
-            url: `https://${tse}.auth-qa1.marketingcloudqaapis.com/v2/userinfo`,
+            url: `https://mcgrkf1grk-7hpymyq-llb56w1p8.auth.marketingcloudapis.com/v2/userinfo`,
             headers: {
                 Authorization: `Bearer ${accessToken}` }
         }) .then(res => {
