@@ -7,12 +7,13 @@
 		"start": "node backend/server.js"
 	},
 	"dependencies": {
+		"axios": "^0.19.2",
 		"body-parser": "^1.17.1",
 		"express": "^4.15.2",
+		"hoek": ">=4.2.1",
 		"jsforce": "^1.7.1",
 		"jsonwebtoken": "^7.4.0",
-		"xmlhttprequest": "1.x.x",
 		"jwt-simple": "^0.5.1",
-		"hoek": ">=4.2.1"
+		"xmlhttprequest": "1.x.x"
 	}
 }
