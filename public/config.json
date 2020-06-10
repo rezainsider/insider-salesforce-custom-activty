@@ -1,69 +1,27 @@
 {
-	"key": "1d35b6fa-e5d8-4fc5-970e-68176fe47cf9",
+	"workflowApiVersion": "1.1",
 	"metaData": {
 		"icon": "images/icon.png",
-		"iconSmall": "images/iconSmall.png",
-		"category": "message",
-		"isConfigured": true
+		"category": "message"
 	},
 	"type": "REST",
 	"lang": {
 		"en-US": {
-			"name": "Insider Push App",
-			"description": "Custom activity that sends push notifications to the contact"
+			"name": "Test oauth app",
+			"description": "Test oauth app"
 		}
 	},
-	"workflowApiVersion": "1.1",
-	"configurationArguments": {
-		"applicationExtensionKey": "1d35b6fa-e5d8-4fc5-970e-68176fe47cf9",
-		"save": {
-			"url": "https://pushnotifyapp.herokuapp.com/activity/save",
-			"verb": "POST",
-			"body": "",
-			"useJwt": true
-		},
-		"publish": {
-			"url": "https://pushnotifyapp.herokuapp.com/activity/publish",
-			"verb": "POST",
-			"body": "",
-			"useJwt": true
-		},
-		"validate": {
-			"url": "https://pushnotifyapp.herokuapp.com/activity/validate",
-			"verb": "POST",
-			"body": "",
-			"useJwt": true
-		}
-	},
+	"arguments": {},
 	"wizardSteps": [
-		{
-			"label": "Configure Activity",
-			"key": "step1"
-		}
+		{ "label": "Step 1", "key": "step1" }
 	],
-	"userInterfaces": {
-		"configModal": {
-			"url": "https://pushnotifyapp.herokuapp.com/index.html",
-			"height": 400,
-			"width": 1000,
-			"fullscreen": false
-		}
-	},
-	"arguments": {
-		"execute": {
-			"inArguments": [
-				{
-					"emailAddress":"{{InteractionDefaults.Email}}"
-				}
-			],
-			"outArguments": [],
-			"url": "https://pushnotifyapp.herokuapp.com/activity/execute",
-			"verb": "POST",
-			"body": "",
-			"header": "",
-			"format": "json",
-			"useJwt": true,
-			"timeout": 90000
+	"userInterfaces":
+	{
+		"configModal":
+		{
+			"height": 200,
+			"width": 300,
+			"fullscreen": true
 		}
 	}
 }

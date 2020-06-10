@@ -10,10 +10,16 @@
   <link rel="stylesheet" href="css/bootstrap.min.css" />
   <script data-main="js/main.js" type="text/javascript" src="js/require.js"></script>
   <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
-  <script type="text/javascript">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(function() {
+            window.location.href = $("#authLink").attr("href");
+        });
+    </script>
+    <script type="text/javascript">
     (function () {
       var config = {
-        baseUrl: 'js'
+        baseUrl: ''
       };
 
       var dependencies = [
@@ -26,7 +32,12 @@
 </head>
 
 <body>
-<a id="authLink" href="https://{authentication-base-uri}/v2/authorize? response_type=code&client_id=55dzvm43rmnvb5qmwaf9dk5l&redirect_uri=https://{endpoint- url}/oauth/redirect"></a>
+<div id="step1" class="step">
+
+<a id="authLink" href="https://mcgrkf1grk-7hpymyq-llb56w1p8.auth.marketingcloudapis.com/v2/authorize?response_type=code&client_id=qw1rb1etv9hvo1sycpz8ra35&redirect_uri=https://https://oauth2-salesforce.herokuapp.com/oauth/redirect">
+
+</a>
+</div>
 </body>
 
 </html>
