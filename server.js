@@ -33,7 +33,7 @@ app.get('/oauth/redirect', (req, res) => {
             "code": `${requestToken}`,
             "client_id": `${clientID}`,
             "client_secret": `${clientSecret}`,
-            "redirect_uri": "https://intense-castle-21074.herokuapp.com/oauth/redirect" }
+            "redirect_uri": "https://oauth2-salesforce.herokuapp.com/oauth/redirect" }
     }).then((response) => {
         /* Once we get the response, extract the access token from
         the response body */
