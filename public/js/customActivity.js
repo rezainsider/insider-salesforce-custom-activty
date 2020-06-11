@@ -1,12 +1,13 @@
 define([
     'postmonger'
-], function (
+], function(
     Postmonger
 ) {
     'use strict';
-    var Postmonger = require('postmonger');
+
     var connection = new Postmonger.Session();
-    var payload = {};
+    // create an empty payload
+    var payload = { metaData: { } };
 
     $(window).ready(function () {
         connection.trigger('ready');
