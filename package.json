@@ -11,7 +11,6 @@
 		"body-parser": "^1.17.1",
 		"express": "^4.17.1",
 		"hoek": ">=4.2.1",
-		"jsforce": "^1.7.1",
 		"jsonwebtoken": "^7.4.0",
 		"jwt-simple": "^0.5.1",
 		"xmlhttprequest": "1.x.x"
