@@ -1,27 +1,69 @@
 {
-	"workflowApiVersion": "1.1",
+	"key": "d44e0ea6-66fb-4269-8967-ab843c782da5",
 	"metaData": {
 		"icon": "images/icon.png",
-		"category": "message"
+		"iconSmall": "images/iconSmall.png",
+		"category": "message",
+		"isConfigured": true
 	},
 	"type": "REST",
 	"lang": {
 		"en-US": {
-			"name": "Test oauth app",
-			"description": "Test oauth app"
+			"name": "Insider Web Push OAuth App V1",
+			"description": "Custom activity that sends web push notifications to the contact"
 		}
 	},
-	"arguments": {},
+	"workflowApiVersion": "1.1",
+	"configurationArguments": {
+		"applicationExtensionKey": "d44e0ea6-66fb-4269-8967-ab843c782da5",
+		"save": {
+			"url": "https://oauth2-salesforce.herokuapp.com/activity/save",
+			"verb": "POST",
+			"body": "",
+			"useJwt": true
+		},
+		"publish": {
+			"url": "https://oauth2-salesforce.herokuapp.com/activity/publish",
+			"verb": "POST",
+			"body": "",
+			"useJwt": true
+		},
+		"validate": {
+			"url": "https://oauth2-salesforce.herokuapp.com/activity/validate",
+			"verb": "POST",
+			"body": "",
+			"useJwt": true
+		}
+	},
 	"wizardSteps": [
-		{ "label": "Step 1", "key": "step1" }
-	],
-	"userInterfaces":
-	{
-		"configModal":
 		{
-			"height": 200,
-			"width": 300,
-			"fullscreen": true
+			"label": "Configure Activity",
+			"key": "step1"
+		}
+	],
+	"userInterfaces": {
+		"configModal": {
+			"url": "https://oauth2-salesforce.herokuapp.com/index.html",
+			"height": 400,
+			"width": 1000,
+			"fullscreen": false
+		}
+	},
+	"arguments": {
+		"execute": {
+			"inArguments": [
+				{
+					"emailAddress": "{{Contact.Attribute.EmailAddress}}"
+				}
+			],
+			"outArguments": [],
+			"url": "https://oauth2-salesforce.herokuapp.com/activity/execute",
+			"verb": "POST",
+			"body": "",
+			"header": "",
+			"format": "json",
+			"timeout": 90000,
+			"useJwt": true
 		}
 	}
 }
