@@ -19,10 +19,8 @@ app.get('/oauth/redirect', (req, res) => {
     /* The req.query object has the query params that
     were sent to this route. We want the `code` param and the tenant specific endpoint (TSE) for the user */
     var requestToken = req.query.code;
-    var tse = req.query.tssd;
     console.log(req.query);
     console.log(requestToken);
-    console.log(tse);
     axios({
 // make a POST request
         method: 'post', // and request token
